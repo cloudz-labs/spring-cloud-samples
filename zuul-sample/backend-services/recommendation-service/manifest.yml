@@ -1,0 +1,9 @@
+applications:
+- name: recommendation-service 
+  memory: 1G
+  instances: 1
+  host: recommendation-service-00dev
+  path: ./target/recommendation-service-0.0.1-SNAPSHOT.war
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:9999}
+
+spring:
+  application:
+    name: apigateway-service
+  
+zuul:
+  ignored-services: '*'
+  routes:
+    contents-service: /contents/**
+    personalization-service: /personalization/**
+    recommendation-service: /recommendation/**
+    account-service: /account/**
+    
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+    metadata-map:
+        instance-id: localhost:${server.port}
+  client:
+    region: default
+    registry-fetch-interval-seconds: 5

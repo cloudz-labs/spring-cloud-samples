@@ -1,0 +1,9 @@
+info:
+  id: ${spring.application.name}
+
+server:
+  port: ${PORT:8989}
+     
+turbine:
+  app-config: APIGATEWAY-SERVICE
+  cluster-name-expression: "'default'"

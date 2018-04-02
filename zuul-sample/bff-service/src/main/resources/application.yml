@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: bff-service
+  thymeleaf:
+    prefix: classpath:/static/html/
+  redis:
+    host: 127.0.0.1
+    port: 6379
+        
+api:
+  services:
+    contents-service: http://localhost:9999/contents
+    personalization-service: http://localhost:9999/personalization
+    account-service: http://localhost:9999/account
+    recommendation-service: http://localhost:9999/recommendation
+    

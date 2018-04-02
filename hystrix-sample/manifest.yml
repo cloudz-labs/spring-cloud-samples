@@ -1,0 +1,9 @@
+---
+applications:
+- name: cna-hystrix-sample
+  memory: 1G
+  instances: 1
+  path: ./target/cna-hystrix-sample-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

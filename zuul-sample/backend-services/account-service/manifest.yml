@@ -1,0 +1,9 @@
+applications:
+- name: account-service
+  memory: 1G
+  instances: 1
+  host: account-service
+  path: ./target/account-service-0.0.1-SNAPSHOT.war
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

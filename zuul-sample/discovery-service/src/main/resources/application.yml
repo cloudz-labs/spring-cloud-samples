@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8761}
+
+spring:
+  application:
+    name: discovery-service
+
+eureka:
+  instance:
+    instance-id: localhost:${server.port}
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+  client:
+    region: default
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    registry-fetch-interval-seconds: 5

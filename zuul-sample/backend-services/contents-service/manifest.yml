@@ -1,0 +1,9 @@
+applications:
+- name: contents-service
+  memory: 1G
+  instances: 1
+  host: contents-service
+  path: ./target/contents-service-0.0.1-SNAPSHOT.war
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

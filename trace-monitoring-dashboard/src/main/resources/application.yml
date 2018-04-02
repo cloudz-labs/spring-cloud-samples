@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:9411}
+  
+zipkin:       
+  ui:
+    query-limit: 15
+    environment: test label
+    default-lookback: 604800000  
+    instrumented: .*     
+  query:  
+    lookback: 120000 

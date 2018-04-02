@@ -1,0 +1,9 @@
+applications:
+- name: bff-service
+  memory: 1G
+  instances: 1
+  host: bff-service
+  path: ./target/bff-service-0.0.1-SNAPSHOT.war
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

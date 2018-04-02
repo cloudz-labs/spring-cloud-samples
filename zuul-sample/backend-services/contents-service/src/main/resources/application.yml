@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8082}
+
+spring:
+  application:
+    name: contents-service
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+    metadata-map:
+        instance-id: localhost:${server.port}
+  client:
+    region: default
+    registry-fetch-interval-seconds: 5 
+  

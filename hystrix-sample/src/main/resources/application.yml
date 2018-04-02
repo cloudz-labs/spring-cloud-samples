@@ -1,0 +1,14 @@
+hystrix: 
+  command: 
+    default: 
+      execution: 
+        isolation:
+          thread:
+            timeoutInMilliseconds:  60000
+        timeout:
+          enabled: true
+      circuitBreaker:
+        enabled: true
+  threadpool: 
+    default:  
+      coreSize: 10      

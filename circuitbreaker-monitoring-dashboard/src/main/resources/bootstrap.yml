@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: circuitbreaker-monitoring-dashboard
+    
+---
+spring:
+  profiles: cloud
+  cloud:
+    config:
+      uri: ${vcap.services.configuration-service.credentials.uri:http://localhost:8888}
+
+---
+spring:
+  profiles: default
+  cloud:
+    config:
+      enabled: false

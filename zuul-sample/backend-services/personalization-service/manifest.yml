@@ -1,0 +1,9 @@
+applications:
+- name: personalization-service
+  memory: 1G
+  instances: 1
+  host: personalization-service
+  path: ./target/personalization-service-0.0.1-SNAPSHOT.war
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
