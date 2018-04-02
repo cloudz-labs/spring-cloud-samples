@@ -4,19 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.skcc</groupId>
-	<artifactId>zuul-sample</artifactId>
+	<artifactId>backend-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>zuul-sample</name>
+	<name>backend-services</name>
 	<description>Demo project for Cloud Native Application with Zuul</description>
 
 	<modules>
-		<module>apigateway-service</module>
-		<module>backend-services</module>
-		<module>bff-service</module>
-		<module>discovery-service</module>
-		<module>redis-data-loader</module>
+		<module>account-service</module>
+    	<module>contents-service</module>
+    	<module>personalization-service</module>
+    	<module>recommendation-service</module>
 	</modules>
 
 	<properties>

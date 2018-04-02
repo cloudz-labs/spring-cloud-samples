@@ -1,2 +1,0 @@
-server:
-  port: ${PORT:6161}
